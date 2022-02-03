@@ -9,6 +9,11 @@ function TextForm(props) {
         let newText= Text.toLowerCase();
         setText(newText);
     }
+    const handleCopy=()=>{
+        let newText= document.getElementById('myBox');
+        newText.select();
+        navigator.clipboard.writeText(newText.value);
+    }
     const handleClickClear=()=>{
         setText('');
     }
@@ -27,6 +32,7 @@ function TextForm(props) {
     <button className="btn btn-primary" onClick={handleUpClick}>Convert to Uppercase</button>
     <button className="btn btn-primary mx-3" onClick={handleLoClick}>Convert to Lowercase</button>
     <button className="btn btn-danger" onClick={handleClickClear}>Clear All</button>
+    <button className="btn btn-success mx-3" onClick={handleCopy}>Copy Text</button>
     </div>
     <div className="container my-4">
         <h3>Counter</h3>
