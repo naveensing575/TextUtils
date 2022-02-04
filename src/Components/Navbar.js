@@ -4,7 +4,7 @@ function Navbar(props) {
   return (
     <>
     <div >
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark" >
+    <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
     <div className="container-fluid" >
       <a className="navbar-brand" href="/" >{props.title}</a>
       <button className="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,6 +19,10 @@ function Navbar(props) {
             <a className="nav-link" href="./About.js" >About</a>
           </li>
         </ul>
+      <div className="form-check form-switch mx-3">
+          <input className="form-check-input"  onClick={props.toggleMode} type="checkbox" id="flexSwitchCheckDefault" style={{cursor:'pointer'}}/>
+          <label className="form-check-label" htmlFor="flexSwitchCheckDefault" style={{color: 'rgb(13, 110, 253)'}}>{props.modeText}</label>
+        </div>
         <form className="d-flex" >
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
           <button className="btn btn-outline-primary"  type="submit">Search</button>
