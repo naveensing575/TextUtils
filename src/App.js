@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import Navbar from './Components/Navbar';
 import './App.css';
-// import About from './Components/About';
-// import Card from './Components/Card';
+import About from './Components/About';
+import Card from './Components/Card';
 import TextForm from './Components/TextForm';
 import Alert from './Components/Alert';
-
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route  
+} from "react-router-dom";
+// import your route components too
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -28,13 +33,17 @@ function App() {
   
   return (
     <>
+    <Router>
     <Alert/>
     <Navbar title='TextUtils' mode={mode} toggleMode={toggleMode} modeText={modeText} />
-    {/* <Card/> */}
     <div className="container my-3">
-    <TextForm heading='Enter the text to convert it.'/>
-    {/* <About/> */}
+    <Routes>
+      <Route exact path ="/Home" element={<TextForm  heading='Enter the text to convert it.'/>}/>
+      <Route exact path ="/About" element={<About/>}/>
+      <Route exact path ="/Card" element={<Card/>}/> {/*Exact should be used in order to make routes path more accurate and less prone to errors.*/}
+    </Routes>
     </div>
+    </Router>
     </>
   );
 }
