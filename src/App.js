@@ -4,6 +4,7 @@ import './App.css';
 // import About from './Components/About';
 // import Card from './Components/Card';
 import TextForm from './Components/TextForm';
+import Alert from './Components/Alert';
 
 
 function App() {
@@ -24,8 +25,10 @@ function App() {
       document.body.style.color='#212529';
     }
   }
+  
   return (
     <>
+    <Alert/>
     <Navbar title='TextUtils' mode={mode} toggleMode={toggleMode} modeText={modeText} />
     {/* <Card/> */}
     <div className="container my-3">
