@@ -34,7 +34,6 @@ function App() {
 
   return (
     <>
-    <Router>
     <Alert/>
     <Navbar title='TextUtils' mode={mode} toggleMode={toggleMode} modeText={modeText}/>
     <div className="container my-3">
@@ -45,7 +44,6 @@ function App() {
       <Route exact path ="/Card" element={<Card/>}/> {/*Exact should be used in order to make routes path more accurate and less prone to errors.*/}
     </Routes>
     </div>
-    </Router>
     </>
   );
 }
