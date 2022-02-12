@@ -41,8 +41,8 @@ function App() {
     <Routes>
       <Route path="/" element={<TextForm heading='Enter the text to convert it.'/>}/>
       <Route exact path ="/Home" element={<TextForm  heading='Enter the text to convert it.'/>}/>
-      <Route exact path ="/About" element={<About/>}/>
-      <Route exact path ="/Card" element={<Card/>}/> {/*Exact should be used in order to make routes path more accurate and less prone to errors.*/}
+      <Route exact path ="/About" element={<About mode={mode}/>}/>
+      <Route exact path ="/Cards" element={<Card mode={mode}/>}/> {/*Exact should be used in order to make routes path more accurate and less prone to errors.*/}
     </Routes>
     </div>
     </Router>
