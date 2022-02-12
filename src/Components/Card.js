@@ -7,7 +7,9 @@ function Card() {
     }
   return (
       <>
-      <div style={{display:'inline-flex'}}>
+      <div className='my-5'>
+      <h2 className='mx-5'>Cards</h2>
+      <div className='container' style={{display:'inline-flex'}}>
     <div className="card" style={styleName}>
     <img src="..." className="card-img-top" style={{backgroundColor: 'silver', height: '8rem'}} alt="..."/>
     <div className="card-body">
@@ -39,6 +41,7 @@ function Card() {
       <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <a href="/" className="btn btn-primary">Go somewhere</a>
     </div>
+  </div>
   </div>
   </div>
   </>
