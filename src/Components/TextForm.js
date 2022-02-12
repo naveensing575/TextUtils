@@ -29,10 +29,10 @@ function TextForm(props) {
     <textarea className="form-control" id="myBox" rows="3" value={Text} onChange={handleOnChange}></textarea>
     </div>
     <div className="container">
-    <button className="btn btn-primary" onClick={handleUpClick}>Convert to Uppercase</button>
-    <button className="btn btn-primary mx-3" onClick={handleLoClick}>Convert to Lowercase</button>
-    <button className="btn btn-danger" onClick={handleClickClear}>Clear All</button>
-    <button className="btn btn-success mx-3" onClick={handleCopy}>Copy Text</button>
+    <button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
+    <button className="btn btn-primary mx-1 my-1" onClick={handleLoClick}>Convert to Lowercase</button>
+    <button className="btn btn-danger mx-1 my-1" onClick={handleClickClear}>Clear All</button>
+    <button className="btn btn-success mx-1 my-1" onClick={handleCopy}>Copy Text</button>
     </div>
     <div className="container my-4">
         <h3>Counter</h3>
